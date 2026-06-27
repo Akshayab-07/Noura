@@ -1,0 +1,213 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Work+Sans:wght@400;500;600&display=swap');
+
+@layer base {
+  * {
+    box-sizing: border-box;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Work Sans', sans-serif;
+    background-color: #fff8f7;
+    color: #231919;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+  }
+
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: #ffb3b3;
+    border-radius: 9999px;
+  }
+
+  ::selection {
+    background: #ff7e8b;
+    color: white;
+  }
+}
+
+@layer components {
+  .btn-primary {
+    @apply px-6 py-3 rounded-full font-semibold text-sm transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed;
+    background-color: #a43947;
+    color: white;
+  }
+
+  .btn-primary:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+  }
+
+  .btn-secondary {
+    @apply px-6 py-3 rounded-full font-semibold text-sm transition-all duration-200 active:scale-95;
+    background-color: #dbcdfe;
+    color: #231919;
+  }
+
+  .btn-ghost {
+    @apply px-6 py-3 rounded-full font-semibold text-sm transition-all duration-200 active:scale-95 border;
+    background: transparent;
+    color: #a43947;
+    border-color: #e0c8c8;
+  }
+
+  .card {
+    @apply rounded-2xl p-6 transition-shadow duration-300;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(164, 57, 71, 0.04);
+  }
+
+  .card:hover {
+    box-shadow: 0 8px 30px rgba(164, 57, 71, 0.08);
+  }
+
+  .card-sm {
+    @apply rounded-xl p-4;
+    background-color: #ffffff;
+    box-shadow: 0 4px 20px rgba(164, 57, 71, 0.04);
+  }
+
+  .input {
+    @apply w-full px-4 py-3 rounded-xl border text-sm transition-all duration-200;
+    background-color: #ffffff;
+    border-color: #e0c8c8;
+    color: #231919;
+  }
+
+  .input:focus {
+    outline: none;
+    border-color: #a43947;
+    box-shadow: 0 0 0 3px rgba(164, 57, 71, 0.15);
+  }
+
+  .input::placeholder {
+    color: #b0909090;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-semibold;
+  }
+
+  .badge-primary {
+    @apply badge;
+    background-color: #ff7e8b;
+    color: white;
+  }
+
+  .badge-secondary {
+    @apply badge;
+    background-color: #dbcdfe;
+    color: #231919;
+  }
+
+  .nav-item {
+    @apply flex items-center gap-3 px-4 py-3 rounded-xl font-semibold text-sm cursor-pointer transition-all duration-200;
+    color: #6b4f4f;
+  }
+
+  .nav-item:hover {
+    background-color: #fee9e9;
+    color: #a43947;
+  }
+
+  .nav-item-active {
+    @apply nav-item;
+    background-color: #dbcdfe;
+    color: #231919;
+  }
+
+  .page-container {
+    @apply max-w-7xl mx-auto px-4 md:px-6 lg:px-8;
+  }
+
+  .section {
+    @apply py-12 md:py-16;
+  }
+
+  .shadow-soft {
+    box-shadow: 0 4px 20px rgba(164, 57, 71, 0.04);
+  }
+
+  .shadow-hover {
+    box-shadow: 0 8px 30px rgba(164, 57, 71, 0.08);
+  }
+
+  .hover-lift {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 30px rgba(164, 57, 71, 0.08);
+  }
+
+  .skeleton {
+    @apply animate-pulse rounded-xl;
+    background-color: #fee9e9;
+  }
+
+  .ai-fab {
+    @apply fixed bottom-6 right-6 w-14 h-14 rounded-full flex items-center justify-center cursor-pointer transition-all duration-200 z-50;
+    background-color: #a43947;
+    color: white;
+    box-shadow: 0 8px 30px rgba(164, 57, 71, 0.08);
+  }
+
+  .ai-fab:hover {
+    transform: scale(1.1);
+  }
+
+  .progress-ring {
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    background: linear-gradient(135deg, #a43947, #ff7e8b);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .bg-gradient-brand {
+    background: linear-gradient(135deg, #fff8f7 0%, #fee9e9 50%, #fff0f0 100%);
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.3s ease-out;
+  }
+
+  .animate-float {
+    animation: float 3s ease-in-out infinite;
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
