@@ -82,18 +82,18 @@ export default function LandingPage() {
                 </div>
 
                 <h1 className="font-headline text-4xl md:text-5xl font-bold text-on-background leading-tight tracking-tight">
-                  AI Nutrition Planner Built Around{' '}
+                  Smart Nutrition Planner Built Around{' '}
                   <span className="text-gradient">YOUR Deficiencies</span>
                 </h1>
 
                 <p className="text-on-surface-variant text-lg leading-relaxed">
                   Fix Vitamin D, B12, Iron and more with personalized Indian meal plans. 
-                  Most apps ask what&apos;s wrong with you. <strong className="text-on-surface">Noura figures it out.</strong>
+                  Most apps ask what&apos;s wrong with you. <strong className="text-on-surface">Noura maps out the solution.</strong>
                 </p>
 
                 <div className="flex flex-col sm:flex-row gap-3 mt-2">
                   <Link href="/signup" className="btn-primary flex items-center justify-center gap-2 text-base py-4 px-8">
-                    Start Free — No Card Needed
+                    Start Free — Instant Access
                     <ArrowRight className="w-4 h-4" />
                   </Link>
                   <a href="#how-it-works" className="btn-ghost flex items-center justify-center gap-2 text-base py-4 px-8">
@@ -106,7 +106,7 @@ export default function LandingPage() {
                 <div className="flex items-center gap-6 mt-2 flex-wrap">
                   <div className="flex items-center gap-1 text-sm text-on-surface-variant">
                     <Check className="w-4 h-4 text-primary" />
-                    <span>No credit card</span>
+                    <span>Instant setup</span>
                   </div>
                   <div className="flex items-center gap-1 text-sm text-on-surface-variant">
                     <Check className="w-4 h-4 text-primary" />
@@ -114,7 +114,7 @@ export default function LandingPage() {
                   </div>
                   <div className="flex items-center gap-1 text-sm text-on-surface-variant">
                     <Check className="w-4 h-4 text-primary" />
-                    <span>AI-powered</span>
+                    <span>Science-backed</span>
                   </div>
                 </div>
               </div>
@@ -219,8 +219,8 @@ export default function LandingPage() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
               {[
-                { step: '01', icon: '🧬', title: 'Tell Us About Yourself', desc: 'Enter your known deficiencies or describe your symptoms. Noura uses AI to figure out the rest.' },
-                { step: '02', icon: '🤖', title: 'AI Builds Your Plan', desc: 'Gemini AI generates a 7-day Indian meal plan targeting exactly your deficiencies.' },
+                { step: '01', icon: '🧬', title: 'Tell Us About Yourself', desc: 'Enter your known deficiencies or describe your symptoms. Noura dynamically identifies exactly what your body needs.' },
+                { step: '02', icon: '📊', title: 'Custom-Built Plan', desc: 'Our engine computes a targeted 7-day Indian meal plan focusing perfectly on your specific deficiencies.' },
                 { step: '03', icon: '✅', title: 'Track Daily', desc: 'Log each meal as you eat it. Mark it done in one tap. Watch your scores improve.' },
                 { step: '04', icon: '📈', title: 'Improve Over Time', desc: 'Weekly progress charts and achievements show your nutrition journey growing.' },
               ].map((item, i) => (
@@ -292,48 +292,47 @@ export default function LandingPage() {
           </div>
         </section>
 
-      
         {/* Trust Section */}
-<section className="py-12 bg-surface-container-low">
-  <div className="page-container">
-    <div className="text-center mb-8">
-      <h2 className="font-headline text-2xl font-bold text-on-background mb-2">
-        Backed by Verified Research
-      </h2>
-      <p className="text-on-surface-variant text-sm">
-        Every meal recommendation is grounded in official Indian nutrition science
-      </p>
-    </div>
-    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-      {[
-        {
-          icon: '🏛️',
-          title: 'ICMR Dietary Guidelines 2024',
-          desc: 'Indian Council of Medical Research — official dietary recommendations for Indians',
-        },
-        {
-          icon: '🔬',
-          title: 'NIN IFCT 2017',
-          desc: 'National Institute of Nutrition — Indian Food Composition Tables with nutrient data for 856 Indian foods',
-        },
-        {
-          icon: '📊',
-          title: 'ICMR-NIN RDA 2020',
-          desc: 'Recommended Dietary Allowances specific to Indian population including EAR values',
-        },
-      ].map((item, i) => (
-        <div key={i} className="card text-center">
-          <div className="text-4xl mb-4">{item.icon}</div>
-          <h3 className="font-headline font-bold text-on-surface text-sm mb-2">{item.title}</h3>
-          <p className="text-on-surface-variant text-xs leading-relaxed">{item.desc}</p>
-        </div>
-      ))}
-    </div>
-    <p className="text-center text-xs text-on-surface-variant mt-6">
-      ⚠️ Noura provides general nutrition guidance only. Always consult a registered dietitian or doctor before making dietary changes.
-    </p>
-  </div>
-</section>
+        <section className="py-12 bg-surface-container-low">
+          <div className="page-container">
+            <div className="text-center mb-8">
+              <h2 className="font-headline text-2xl font-bold text-on-background mb-2">
+                Backed by Verified Research
+              </h2>
+              <p className="text-on-surface-variant text-sm">
+                Every meal recommendation is grounded in official Indian nutrition science
+              </p>
+            </div>
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+              {[
+                {
+                  icon: '🏛️',
+                  title: 'ICMR Dietary Guidelines 2024',
+                  desc: 'Indian Council of Medical Research — official dietary recommendations for Indians',
+                },
+                {
+                  icon: '🔬',
+                  title: 'NIN IFCT 2017',
+                  desc: 'National Institute of Nutrition — Indian Food Composition Tables with nutrient data for 856 Indian foods',
+                },
+                {
+                  icon: '📊',
+                  title: 'ICMR-NIN RDA 2020',
+                  desc: 'Recommended Dietary Allowances specific to Indian population including EAR values',
+                },
+              ].map((item, i) => (
+                <div key={i} className="card text-center">
+                  <div className="text-4xl mb-4">{item.icon}</div>
+                  <h3 className="font-headline font-bold text-on-surface text-sm mb-2">{item.title}</h3>
+                  <p className="text-on-surface-variant text-xs leading-relaxed">{item.desc}</p>
+                </div>
+              ))}
+            </div>
+            <p className="text-center text-xs text-on-surface-variant mt-6">
+              ⚠️ Noura provides general nutrition guidance only. Always consult a registered dietitian or doctor before making dietary changes.
+            </p>
+          </div>
+        </section>
 
         {/* CTA Section */}
         <section className="py-20 bg-primary">
@@ -362,10 +361,10 @@ export default function LandingPage() {
             <span className="font-headline font-bold text-primary">Noura</span>
           </div>
           <p className="text-on-surface-variant text-sm text-center">
-  © 2026 Noura. Built with ❤️ for better nutrition.
-  <br />
-  <span className="text-xs">Data: ICMR Dietary Guidelines 2024 · NIN IFCT 2017 · ICMR-NIN RDA 2020 · Not medical advice.</span>
-</p>
+            © 2026 Noura. Built with ❤️ for better nutrition.
+            <br />
+            <span className="text-xs">Data: ICMR Dietary Guidelines 2024 · NIN IFCT 2017 · ICMR-NIN RDA 2020 · Not medical advice.</span>
+          </p>
           <div className="flex items-center gap-6">
             <Link href="/login" className="text-on-surface-variant hover:text-primary text-sm transition-colors">Login</Link>
             <Link href="/signup" className="text-on-surface-variant hover:text-primary text-sm transition-colors">Sign Up</Link>
